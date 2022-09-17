@@ -27,11 +27,29 @@ using System;
 
 int[] numeri = { 2, 6, 7, 5, 3, 9 };
 
+Console.WriteLine("ARRAY ORIGINALE:");
 StampaArray(numeri);
 
-//StampaArray(ElevaArrayAlQuadrato(numeri));
+Console.WriteLine("");
+Console.WriteLine("ARRAY AL QUADRATO:");
 
+StampaArray(ElevaArrayAlQuadrato(numeri));
+
+Console.WriteLine("");
+Console.WriteLine("ARRAY ORIGINALE:");
+StampaArray(numeri);
+
+Console.WriteLine("");
+Console.WriteLine("SOMMA ELEMENTI ARRAY ORIGINALE:");
 Console.WriteLine(sommaElementiArray(numeri));
+
+
+Console.WriteLine("");
+Console.WriteLine("SOMMA ELEMENTI ARRAY AL QUADRATO:");
+Console.WriteLine(sommaElementiArray(ElevaArrayAlQuadrato(numeri)));
+
+
+
 
 void StampaArray(int[] array)
 {
