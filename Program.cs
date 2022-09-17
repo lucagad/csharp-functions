@@ -27,26 +27,40 @@ using System;
 
 int[] numeri = { 2, 6, 7, 5, 3, 9 };
 
+Console.WriteLine("Quanti numeri vuoi inserire? ");
+int N = Convert.ToInt32(Console.ReadLine());
+
+int[] arrayNumeri = new int [N];
+
+for (int i = 0; i < arrayNumeri.Length; i++)
+{
+    Console.WriteLine("Inserisci il {0}° numero: ", i+1);
+    arrayNumeri[i] = Convert.ToInt32(Console.ReadLine());
+    Console.WriteLine(" ");
+}
+
+
+
 Console.WriteLine("ARRAY ORIGINALE:");
-StampaArray(numeri);
+StampaArray(arrayNumeri);
 
 Console.WriteLine("");
 Console.WriteLine("ARRAY AL QUADRATO:");
 
-StampaArray(ElevaArrayAlQuadrato(numeri));
+StampaArray(ElevaArrayAlQuadrato(arrayNumeri));
 
 Console.WriteLine("");
 Console.WriteLine("ARRAY ORIGINALE:");
-StampaArray(numeri);
+StampaArray(arrayNumeri);
 
 Console.WriteLine("");
 Console.WriteLine("SOMMA ELEMENTI ARRAY ORIGINALE:");
-Console.WriteLine(sommaElementiArray(numeri));
+Console.WriteLine(sommaElementiArray(arrayNumeri));
 
 
 Console.WriteLine("");
 Console.WriteLine("SOMMA ELEMENTI ARRAY AL QUADRATO:");
-Console.WriteLine(sommaElementiArray(ElevaArrayAlQuadrato(numeri)));
+Console.WriteLine(sommaElementiArray(ElevaArrayAlQuadrato(arrayNumeri)));
 
 
 
