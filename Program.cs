@@ -23,13 +23,15 @@
 
 //Stampare la somma di tutti i numeri elevati al quadrati
 
+using System;
+
 int[] numeri = { 2, 6, 7, 5, 3, 9 };
 
 StampaArray(numeri);
 
-StampaArray(ElevaArrayAlQuadrato(numeri));
+//StampaArray(ElevaArrayAlQuadrato(numeri));
 
-
+Console.WriteLine(sommaElementiArray(numeri));
 
 void StampaArray(int[] array)
 {
@@ -53,10 +55,23 @@ int Quadrato(int numero)
 
 int[] ElevaArrayAlQuadrato(int[] array)
 {
-    for (int i = 0; i < array.Length; i++)
+	int[] arrayClone = (int[]) array.Clone();
+    for (int i = 0; i < arrayClone.Length; i++)
     {
-		array[i] = Quadrato(array[i]);
+        arrayClone[i] = Quadrato(arrayClone[i]);
     }
 
-	return array;
+	return arrayClone;
+}
+
+int sommaElementiArray(int[] array)
+{
+	int somma = 0;
+
+    for (int i = 0; i < array.Length; i++)
+    {
+        somma += array[i];
+    }
+
+	return somma;
 }
